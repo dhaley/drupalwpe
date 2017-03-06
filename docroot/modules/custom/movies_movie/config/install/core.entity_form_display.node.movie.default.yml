@@ -1,0 +1,108 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.movie.field_imdb_id
+    - field.field.node.movie.field_length
+    - field.field.node.movie.field_movie_actors
+    - field.field.node.movie.field_movie_director
+    - field.field.node.movie.field_movie_genre
+    - field.field.node.movie.field_movie_rating
+    - field.field.node.movie.field_release_year
+    - node.type.movie
+  module:
+    - datetime
+    - path
+id: node.movie.default
+targetEntityType: node
+bundle: movie
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  field_imdb_id:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_length:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+  field_movie_actors:
+    weight: 11
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  field_movie_director:
+    weight: 10
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  field_movie_genre:
+    weight: 6
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  field_movie_rating:
+    weight: 7
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  field_release_year:
+    weight: 9
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+  path:
+    type: path
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

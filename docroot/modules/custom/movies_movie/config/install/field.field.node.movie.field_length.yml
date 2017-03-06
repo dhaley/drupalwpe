@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_length
+    - node.type.movie
+  module:
+    - datetime
+id: node.movie.field_length
+field_name: field_length
+entity_type: node
+bundle: movie
+label: Length
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
