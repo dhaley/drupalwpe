@@ -3,12 +3,10 @@ description: 'Provides Movie content type and related configuration. Enter your 
 type: module
 core: 8.x
 dependencies:
-  - actor
   - datetime
   - field
   - link
   - menu_ui
-  - movie
   - movies_actor
   - movies_director
   - node

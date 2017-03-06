@@ -6,7 +6,6 @@ dependencies:
   - field
   - image
   - menu_ui
-  - movies_movie
   - node
   - path
   - text
