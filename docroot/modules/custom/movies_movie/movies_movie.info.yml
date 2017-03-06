@@ -6,6 +6,7 @@ dependencies:
   - actor
   - datetime
   - field
+  - link
   - menu_ui
   - movie
   - node
