@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.node.movie.field_imdb_id
+    - field.field.node.movie.field_imdb_link
     - field.field.node.movie.field_length
     - field.field.node.movie.field_movie_actors
     - field.field.node.movie.field_movie_director
@@ -105,4 +106,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_imdb_link: true

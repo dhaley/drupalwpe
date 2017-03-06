@@ -3,6 +3,13 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.movie.field_imdb_id
+    - field.field.node.movie.field_imdb_link
+    - field.field.node.movie.field_length
+    - field.field.node.movie.field_movie_actors
+    - field.field.node.movie.field_movie_director
+    - field.field.node.movie.field_movie_genre
+    - field.field.node.movie.field_movie_rating
     - field.field.node.movie.field_release_year
     - node.type.movie
   module:
@@ -15,4 +22,11 @@ content:
   links:
     weight: 100
 hidden:
+  field_imdb_id: true
+  field_imdb_link: true
+  field_length: true
+  field_movie_actors: true
+  field_movie_director: true
+  field_movie_genre: true
+  field_movie_rating: true
   field_release_year: true

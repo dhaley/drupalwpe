@@ -3,14 +3,7 @@ description: 'Provides Movie content type and related configuration. Enter your 
 type: module
 core: 8.x
 dependencies:
-  - actor
-  - datetime
   - field
-  - menu_ui
-  - movie
+  - link
+  - movies_movie
   - node
-  - path
-  - taxonomy
-  - user
-  - views
-package: movies
