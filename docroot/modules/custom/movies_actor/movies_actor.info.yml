@@ -1,0 +1,12 @@
+name: Actor
+type: module
+core: 8.x
+dependencies:
+  - field
+  - image
+  - menu_ui
+  - node
+  - path
+  - text
+  - user
+package: movies
