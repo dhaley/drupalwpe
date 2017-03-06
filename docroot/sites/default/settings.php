@@ -1,8 +1,5 @@
 <?php
 
-$settings['hash_salt'] = 'cdXLPEnUGtZcgXEqwQAjCJ1T2Hp9jZs2TO1k6EASU6qWUS5KxRrWwP7rpprJkRIE6vW1FOuqCA';
-$settings['install_profile'] = 'standard';
-
 /**
  * @file
  * Drupal site-specific configuration file.
@@ -288,6 +285,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
+$settings['hash_salt'] = '';
 
 /**
  * Deployment identifier.
@@ -752,9 +750,9 @@ $settings['file_scan_ignore_directories'] = [
  * Keep this code block at the end of this file to take full effect.
  */
 #
-if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-  include $app_root . '/' . $site_path . '/settings.local.php';
-}
+# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+#   include $app_root . '/' . $site_path . '/settings.local.php';
+# }
 
 
 // On Acquia Cloud, this include file configures Drupal to use the correct
