@@ -762,3 +762,5 @@ if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 if (file_exists('/var/www/site-php')) {
   require('/var/www/site-php/drupalwpe/drupalwpe-settings.inc');
 }
+
+$config_directories['vcs'] = $app_root . '/../config/' . basename($site_path);
