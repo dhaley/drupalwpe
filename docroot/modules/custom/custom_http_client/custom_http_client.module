@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains custom_http_client.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function custom_http_client_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the custom_http_client module.
+    case 'help.page.custom_http_client':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('A custom HTTP client') . '</p>';
+      return $output;
+
+    default:
+  }
+}
