@@ -1,0 +1,5 @@
+services:
+  custom_http_client.client:
+    class: Drupal\custom_http_client\GuzzleHttp\Client
+    arguments: []
+
