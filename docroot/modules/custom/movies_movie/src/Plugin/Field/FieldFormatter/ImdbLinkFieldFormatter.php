@@ -30,10 +30,17 @@ class ImdbLinkFieldFormatter extends FormatterBase {
     foreach ($items as $delta => $item) {
       $movie = $item->getEntity();
       $title = $movie->getTitle();
+      $type = $movie->getType();
       // Just in case, sanitize entered URL.
       $title =  UrlHelper::filterBadProtocol($title);
       $url_title = urlencode($title);
-      $siteUrl = "http://www.omdbapi.com/?t=$url_title";
+      if ($type == 'actor') {
+        // There is no REST API way to lookup actor.
+        $siteUrl = "http://www.omdbapi.com/?t=$url_title";
+      }
+      else {
+        $siteUrl = "http://www.omdbapi.com/?t=$url_title";
+      }
       $client = \Drupal::httpClient();
       $request = $client->get($siteUrl);
       $response = $request->getBody();
