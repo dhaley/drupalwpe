@@ -10,7 +10,7 @@ third_party_settings:
     parent: 'main:'
 name: Movie
 type: movie
-description: 'Enter your movie.e'
+description: 'Enter your movie.'
 help: ''
 new_revision: true
 preview_mode: 1

@@ -24,13 +24,6 @@ content:
     weight: 2
     settings: {  }
     third_party_settings: {  }
-  field_imdb_id:
-    weight: 26
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
   field_length:
     weight: 8
     settings: {  }
@@ -107,4 +100,5 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  field_imdb_id: true
   field_imdb_link: true

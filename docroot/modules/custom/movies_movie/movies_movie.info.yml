@@ -9,6 +9,7 @@ dependencies:
   - menu_ui
   - movies_actor
   - movies_director
+  - movies_movie
   - node
   - path
   - taxonomy
