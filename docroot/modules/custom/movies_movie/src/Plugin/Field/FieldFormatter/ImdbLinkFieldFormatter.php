@@ -27,23 +27,20 @@ class ImdbLinkFieldFormatter extends FormatterBase {
    */
   public function viewElements(FieldItemListInterface $items, $langcode) {
     $elements = [];
-
-    $title = "The Social Network";
-    $url_title = urlencode($title);
-    $siteUrl = "http://www.omdbapi.com/?t=$url_title";
-    $client = \Drupal::httpClient();
-    $request = $client->get($siteUrl);
-    $response = $request->getBody();
-    $json_data = json_decode($request->getBody());
-    $imdbID = $json_data->imdbID;
-    $imbd_url = "http://www.imdb.com/title/$imdbID";
-
-    // Just in case, sanitize entered URL.
-    $url =  UrlHelper::filterBadProtocol($imbd_url);
-
     foreach ($items as $delta => $item) {
-      $elements[$delta] = array('#markup' => $this->t("$url"));
-      // $movie = $item->getEntity();
+      $movie = $item->getEntity();
+      $title = $movie->getTitle();
+      // Just in case, sanitize entered URL.
+      $title =  UrlHelper::filterBadProtocol($title);
+      $url_title = urlencode($title);
+      $siteUrl = "http://www.omdbapi.com/?t=$url_title";
+      $client = \Drupal::httpClient();
+      $request = $client->get($siteUrl);
+      $response = $request->getBody();
+      $json_data = json_decode($request->getBody());
+      $imdbID = $json_data->imdbID;
+      $imbd_url = "http://www.imdb.com/title/$imdbID";
+      $elements[$delta] = array('#markup' => $this->t("<a href='$imbd_url'>$title</a>"));
     }
     return $elements;
   }
